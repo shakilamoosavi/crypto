@@ -10,7 +10,7 @@
     mat-icon {
         margin-bottom: -0.25rem;
     }
-    
+
     .box-container {
         height: auto;
         min-height: 18rem;
@@ -45,7 +45,7 @@
     @media (max-width: 1399px) {
         .box-container {
             margin: 2rem 0.5rem;
-            width: calc(100% - 2rem); /* 2 = width + overflow */
+            width: calc(100% - 2.8rem); /* 2.8 = width + overflow */
             div {
                 padding: 1.3rem .5rem;
             }
@@ -103,6 +103,16 @@
         }
     }
 
+    @media (min-width: 1200px) {
+        .chart-box img {
+            width: 90%;
+        }
+    }
+    @media (max-width: 1199px) {
+        .chart-box img {
+            width: 100%;
+        }
+    }
     .profile-img {
         border-radius: 1rem;
         padding: .5rem;

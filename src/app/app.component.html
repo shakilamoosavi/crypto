@@ -29,7 +29,7 @@
           <div>Settings</div>
         </a>
     
-        <div class="justify-center d-flex">
+        <div class="justify-center d-flex mt-5">
           <div class="margin-top-auto text-center">
             <div class="profile-img">
               <img src="https://www.kindpng.com/picc/m/24-248442_female-user-avatar-woman-profile-member-user-profile.png" />
@@ -41,7 +41,7 @@
     </mat-drawer>
   
     <mat-drawer-content>
-      <mat-icon class="mx-3 mt-3" (click)="drawer1.toggle()">menu</mat-icon>
+      <mat-icon class="mx-3 mt-3 menu-icon" (click)="drawer1.toggle()">menu</mat-icon>
     </mat-drawer-content>
   </mat-drawer-container>
   <!-- mobile menu end -->
@@ -50,10 +50,10 @@
   <div class="main-container container py-5">
     <mat-card class="main-card">
       <div class="row">
-        <div class="px-3 py-4 col-md-2 col-sm-12 web-menu" [ngClass]="showFullMenu ? 'col-xl-2 col-lg-2' : 'col-xl-1 col-lg-1'">
+        <div class="px-3 py-4 col-md-2 col-sm-12 web-menu p-relative" [ngClass]="showFullMenu ? 'col-xl-2 col-lg-2' : 'col-xl-1 col-lg-1'">
           <div [ngClass]="showFullMenu ? 'full-menu' : 'small-menu'">
             <div>
-              <mat-icon class="cursor-pointer mx-3 mb-4" (click)="showFullMenu = !showFullMenu">menu</mat-icon>
+              <mat-icon class="cursor-pointer mx-1 mb-4 menu-icon" (click)="showFullMenu = !showFullMenu">menu</mat-icon>
             </div>
             <a routerLink="/" class="active">
               <mat-icon>home</mat-icon>
@@ -80,7 +80,7 @@
               <div>Settings</div>
             </a>
         
-            <div class="justify-center d-flex full-height">
+            <div class="justify-center d-flex last-box mb-5">
               <div class="margin-top-auto text-center">
                 <div class="profile-img">
                   <img src="https://www.kindpng.com/picc/m/24-248442_female-user-avatar-woman-profile-member-user-profile.png" />
