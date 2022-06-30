@@ -53,6 +53,8 @@
   <div class="main-container container py-5">
     <mat-card class="main-card">
       <div class="row">
+
+        <!-- web menu start -->
         <div class="px-3 py-4 col-md-2 col-sm-12 web-menu p-relative" [ngClass]="showFullMenu ? 'col-xl-2 col-lg-2' : 'col-xl-1 col-lg-1'">
           <div [ngClass]="showFullMenu ? 'full-menu' : 'small-menu'">
             <div>
@@ -96,9 +98,14 @@
 
           </div>
         </div>
+        <!-- web menu end -->
+
+        <!-- page content start -->
         <div class="px-3 py-4 col-md-12 col-sm-12 mb-3" [ngClass]="showFullMenu ? 'col-xl-10 col-lg-10 ' : 'col-xl-11 col-lg-11'">
           <router-outlet></router-outlet>
         </div>
+        <!-- page content end -->
+
       </div>
     </mat-card>
   </div>
