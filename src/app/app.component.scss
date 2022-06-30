@@ -1,0 +1,91 @@
+
+	.container {
+        height: 100%;
+        min-height: 100vh;
+    }
+    .main-card {
+        border-radius: 2rem !important;
+        background: #191d20 !important;
+        box-shadow: none !important;
+        padding: 0;
+    }
+    mat-card {
+        border-radius: 1rem;
+    }
+
+    mat-icon {
+        margin-bottom: -0.25rem;
+    }
+    a {
+        padding: 0.5rem 1rem;
+        margin: 1rem .7rem;
+        display: flex;
+        border-radius: 0.7rem;
+        cursor: pointer;
+        text-decoration: none !important;
+        color: var(--main-color-3) !important;
+        height: 40px;
+        div {
+            width: 100%;
+            text-align: left;
+            padding-top: 0.2rem;
+            padding-left: 1rem;
+            font-size: 80%;
+        }
+    }
+    a.active {
+        background: linear-gradient(to right, #265b44, #4ab188);
+        box-shadow: inset 8px 4px 9px #4ab188, inset -26px 11px 21px #265b44, 0 6px 20px 0 rgb(0 0 0 / 19%);
+        color: inherit !important;
+    }
+
+
+    @media (min-width: 992px) {
+        .mobile-menu {
+            display: none !important;
+        }
+    }
+    @media (max-width: 991px) {
+        .web-menu {
+            display: none !important;
+        }
+        .container {
+            padding-top: 1rem !important;
+        }
+    }
+    @media (max-width: 1399px) and (min-width: 768px) {
+        a {
+            margin: 1rem .1rem !important;
+            padding: 0.5rem 0.2rem !important;
+        }
+    }
+    .web-menu {
+        border-right: 2px solid var(--main-color-2);
+    }
+
+    .profile-img {
+        border-radius: 1rem;
+        padding: .5rem;
+        border: 1px solid var(--main-color-2);
+        width: 4rem;
+        height: 4rem;
+        margin: auto;
+        margin-bottom: 1rem;
+        img {
+            border-radius: 1rem;
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+.small-menu {
+    a {
+        div {
+            display: none;
+        }
+        text-align: center !important;
+    }
+    .profile-img {
+        display: none;
+    }
+}

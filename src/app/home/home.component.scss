@@ -1,0 +1,166 @@
+
+	.container {
+        height: 100%;
+        min-height: 100vh;
+    }
+    mat-card {
+        border-radius: 1rem;
+    }
+
+    mat-icon {
+        margin-bottom: -0.25rem;
+    }
+    
+    .box-container {
+        height: auto;
+        min-height: 18rem;
+        position: relative;
+
+        div {
+            width: 100%;
+            height: auto;
+            min-height: 100%;
+            position: absolute;
+            border-radius: 2rem;            
+    
+        }
+
+        div:nth-child(1) {
+            background: linear-gradient(#386962, #6ccbbd);
+            box-shadow: inset 0 25px 22px #6ccbbd, 0 6px 20px 0 rgb(0 0 0 / 19%);
+        }
+        div:nth-child(2) {
+            background: linear-gradient(#20586c, #3eafd2);
+            box-shadow: inset 0 25px 20px #3eafd2, 0 6px 20px 0 rgb(0 0 0 / 19%);
+        }
+        div:nth-child(3) {
+            background: linear-gradient(#4a3e8b, #7964e4);
+            box-shadow: inset 0 25px 16px #7964e4, inset 0px -14px 15px #221f2c, 0 6px 20px 0 rgb(0 0 0 / 19%);
+            text-shadow:0px -1px 43px #283966;
+            text-align: center;
+        }
+    }
+
+    
+    @media (max-width: 1399px) {
+        .box-container {
+            margin: 2rem 0.5rem;
+            width: calc(100% - 2rem); /* 2 = width + overflow */
+            div {
+                padding: 1.3rem .5rem;
+            }
+            div:nth-child(1) {
+                -ms-transform: rotate(10deg); /* IE 9 */
+                transform: rotate(10deg);
+                margin-left: 2rem;
+            }
+            div:nth-child(2) {
+                -ms-transform: rotate(5deg); /* IE 9 */
+                transform: rotate(5deg);
+                margin-left: 1rem;
+            }
+        }
+    }
+    @media (min-width: 1400px) {
+        .box-container {
+            margin: 2rem;
+            width: calc(100% - 4rem);
+            div {
+                padding: 1.5rem;
+            }
+            div:nth-child(1) {
+                -ms-transform: rotate(30deg); /* IE 9 */
+                transform: rotate(30deg);
+                margin-left: 3.2rem;
+            }
+            div:nth-child(2) {
+                -ms-transform: rotate(15deg); /* IE 9 */
+                transform: rotate(15deg);
+                margin-left: 1.7rem;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        .mobile-menu {
+            display: none !important;
+        }
+    }
+    @media (max-width: 991px) {
+        .web-menu {
+            display: none !important;
+        }
+        .container {
+            padding-top: 1rem !important;
+        }
+    }
+    @media (max-width: 767px) {
+        .box-container-parent {
+            order: 3;
+        }
+        .avg-chart-box {
+            order: 4;
+        }
+    }
+
+    .profile-img {
+        border-radius: 1rem;
+        padding: .5rem;
+        border: 1px solid var(--main-color-2);
+        width: 4rem;
+        height: 4rem;
+        margin-bottom: 1rem;
+        img {
+            border-radius: 1rem;
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+.increase-value {
+    color: #89afae;
+    font-weight: 600;
+}
+
+
+.item-detail-icon-box{
+    border-radius: 0.3rem;
+    padding: 0.25rem !important;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: 40%;
+}
+.binance-detail {
+    color: #a68f44;
+}
+.item-detail-icon-box.binance-detail {
+    background-color: #a68f44;
+    background-image: url("../../assets/images/icons/bin-icon.png");
+}
+.ltc-detail {
+    color: #4c8b52;
+}
+.item-detail-icon-box.ltc-detail {
+    background-color: #4c8b52;
+    background-image: url("../../assets/images/icons/ltc-icon.png");
+}
+.btc-detail {
+    color: #edbf2e;
+}
+.item-detail-icon-box.btc-detail {
+    background-color: #edbf2e;
+    background-image: url("../../assets/images/icons/btc-icon.png");
+}
+.eth-detail {
+    color: #0baf9d;
+}
+.item-detail-icon-box.eth-detail {
+    background-color: #0baf9d;
+    background-image: url("../../assets/images/icons/eth-icon.png");
+}
+
+.chart-box {
+    overflow: auto;
+}

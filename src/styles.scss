@@ -1,0 +1,201 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$crypto-primary: mat.define-palette(mat.$indigo-palette);
+$crypto-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$crypto-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$crypto-theme: mat.define-dark-theme((
+  color: (
+    primary: $crypto-primary,
+    accent: $crypto-accent,
+    warn: $crypto-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($crypto-theme);
+
+
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../node_modules/@angular/material/theming";
+
+@include mat.core();
+
+$angular-primary: mat.define-palette(mat.$teal-palette, 500, 100, 900);
+$angular-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$angular-warn: mat.define-palette(mat.$red-palette);
+
+$angular-default-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $angular-primary,
+      accent: $angular-accent,
+      warn: $angular-warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($angular-default-theme);
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
+
+* {
+  font-family: 'Montserrat';
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+:root {
+    --main-color-1: #f4f4f4;
+    --main-color-2: #4d4d4d;
+    --main-color-3: #adb0b2;
+}
+
+// global classes start
+.cursor-pointer {
+  cursor: pointer;
+}
+.nowrap-text {
+  white-space: nowrap;
+}
+mat-icon {
+  width: 30px !important;
+}
+.margin-auto {
+  margin: auto !important;
+}
+.margin-top-auto {
+  margin-top: auto;
+}
+.full-height {
+  height: 100vh;
+}
+.justify-center {
+  justify-content: center;
+}
+.small-icon {
+  font-size: 1rem;
+  width: auto !important;
+  height: auto !important;
+}
+.bold-weight {
+    font-weight: bold;
+}
+.bold {
+    font-weight: bold;
+    font-size: 120%;
+}
+@media (min-width: 500px) and (max-width: 1199px) {
+  .report-item {
+      .item-detail-icon-box {
+        margin-left: calc(-0.5 * var(--bs-gutter-x));
+      }
+      .col-4 {
+        padding: 0 !important;
+      }
+  }
+  .bolder {
+    font-size: 150% !important;
+    letter-spacing: 1.3px !important;
+  }
+  .bold {
+    font-size: 90% !important;
+  }
+  .smaller {
+    font-size: 65% !important;
+  }
+  .col {
+    padding: 0 .1rem !important;
+  }
+
+}
+.bolder {
+    font-weight: bold;
+    font-size: 220%;
+    letter-spacing: 2px;
+}
+
+.smaller {
+    font-size: 70%;
+}
+
+.danger-text {
+    color: red;
+}
+
+.success-text {
+    color: #417b5e;
+}
+.color-1 {
+    color: var(--main-color-1);
+}
+
+.color-2 {
+    color: var(--main-color-2);
+}
+
+.color-3 {
+    color: var(--main-color-3)
+}
+.mat-form-field-appearance-outline {
+  .mat-form-field-outline-gap,.mat-form-field-outline-start, .mat-form-field-outline-end{
+    border: none !important;
+    border-radius: 0 !important;
+  }
+  .mat-form-field-flex {
+    background: linear-gradient(to right, #111316, #2e343b);
+    box-shadow: inset 18px 0 15px #222b32, inset -12px 0 20px #161616, 0 6px 20px 0 rgb(0 0 0 / 19%) !important;
+    border-radius: 0.7rem;
+  }
+}
+
+// global classes end
+
+
+mat-drawer-container {
+  height: 100% !important;
+  position: unset !important;
+}
+mat-drawer-content mat-icon {
+  cursor: pointer !important;
+}
+// mat-drawer, mat-drawer-container, .mat-drawer-backdrop.mat-drawer-shown {
+//   background: transparent !important;
+// }
+
+.select-box .mat-form-field-appearance-outline {
+  .mat-form-field-infix {
+    padding: 0 0 0.7rem 0 !important
+  }
+  width: 120px;
+  color: var(--main-color-3) !important;
+  font-weight: bold;
+}
+.mat-select-value {
+  color: var(--main-color-3) !important;
+}
+@media (min-width: 768px) and (max-width: 1399px){
+  .container {
+      max-width: 95% !important;
+  }
+}

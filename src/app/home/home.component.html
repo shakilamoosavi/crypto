@@ -1,0 +1,175 @@
+<div class="row">
+    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12">
+
+      <!-- input search start -->
+      <div class="row">
+        <div class="col-xl-8 col-lg-9 col-md-10 col-sm-12 col-sm-12 mb-3">
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-icon matPrefix class="mx-2">search</mat-icon>
+              <mat-label>Search for states</mat-label>
+              <input matInput placeholder="Tap to search...">
+            </mat-form-field>
+        </div>
+      </div>
+      <!-- input search end -->
+
+
+      <div>
+        <span class="d-block">
+          <span class="bolder"> 12.670,90 </span>
+          <span class="small bold-weight"> USD </span>
+        </span>
+        <span class="d-block mb-3">
+          <span class="small bold-weight mr-2"> $9839.8 </span>
+          <span class="small bold-weight success-text mx-3"> +8,1% </span>
+        </span>
+
+        <!-- selectbox filter start -->
+        <div class="select-box">
+          <form [formGroup]="searchParams">
+            <mat-form-field appearance="outline">
+              <mat-select formControlName="filter">
+                <mat-option value="btc_usd">BTC/USD</mat-option>]
+              </mat-select>
+            </mat-form-field>
+          </form>
+        </div>
+        <!-- selectbox filter start -->
+
+      </div>
+
+      <!-- main chart start -->
+      <div class="chart-box mb-3">
+        <img class="w-100" src="../../assets/images/Capture.jpg">
+      </div>
+      <!-- main chart end -->
+
+
+      
+      <div class="row">
+        <!-- BTC card start -->
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-3">
+          <mat-card class="report-item">
+            <div class="item-detail-icon-box btc-detail"></div>
+            <div class="row">
+              <div class="col-4 margin-auto">
+                <span class="bold d-block"> Bitcoin </span>
+                <span class="smaller color-3 d-block"> BTC </span>
+              </div>
+              <div class="col-4 btc-detail px-1 text-center">
+                <img class="w-100" src="../../assets/images/btc-bar.png">
+              </div>
+              <div class="col-4 margin-auto text-center">
+                <span class="bold d-block"> $25.30 </span>
+                <span class="smaller success-text d-block bold-weight nowrap-text"> +1.68 (137) </span>
+              </div>
+              
+            </div>
+          </mat-card>
+        </div>
+        <!-- BTC card start -->
+
+        <!-- ETH card start -->
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-3">
+          <mat-card class="report-item">
+            <div class="item-detail-icon-box eth-detail"></div>
+            <div class="row">
+              <div class="col-4 margin-auto">
+                <span class="bold d-block"> Ethereum </span>
+                <span class="smaller color-3 d-block"> ETH </span>
+              </div>
+              <div class="col-4 eth-detail px-1 text-center">
+                <img class="w-100" src="../../assets/images/eth-bar.png">
+              </div>
+              <div class="col-4 margin-auto text-center">
+                <span class="bold d-block"> $13.410 </span>
+                <span class="smaller success-text d-block bold-weight nowrap-text"> +1.68 (137) </span>
+              </div>
+              
+            </div>
+          </mat-card>
+        </div>
+        <!-- ETH card start -->
+      </div>
+    </div>
+
+
+    <!-- right box start -->
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-3">
+      <div class="row">
+        <div class="col-12 box-container-parent">
+          <div class="box-container">
+            <div></div>
+            <div></div>
+            <div class="mb-3">
+              <img class="mb-4" width="30" src="../../assets/images/icons/fire-icon.png" />
+              <span class="small d-block mb-3">
+                Total Balance
+              </span>
+              <span class="bolder d-block mb-4"> 3.670.20 </span>
+              <span class="d-block mb-3"> $9839.8 </span>
+              <span class="d-block mb-2 increase-value"> +3.11%
+                <mat-icon class="small-icon">call_made</mat-icon>
+              </span>
+            </div>
+          </div>  
+        </div>
+
+        <!-- binance card start -->
+        <div class="col-12 mb-3">
+          <mat-card class="report-item">
+            <div class="item-detail-icon-box binance-detail"></div>
+            <div class="row">
+              <div class="col-4 margin-auto">
+                <span class="bold d-block"> Binance </span>
+                <span class="smaller color-3 d-block"> BIN </span>
+              </div>
+              <div class="col-4 binance-detail px-1 text-center">
+                <img class="w-100" src="../../assets/images/bin-bar.png">
+              </div>
+              <div class="col-4 margin-auto text-center">
+                <span class="bold d-block"> $9.44 </span>
+                <span class="smaller danger-text d-block bold-weight nowrap-text"> -1.68 (137) </span>
+              </div>
+              
+            </div>
+          </mat-card>
+        </div>
+        <!-- binance card end -->
+
+
+        <!-- LTC card start -->
+        <div class="col-12 mb-3">
+          <mat-card class="report-item">
+            <div class="item-detail-icon-box ltc-detail"></div>
+            <div class="row">
+              <div class="col-4 margin-auto">
+                <span class="bold d-block"> LTC </span>
+                <span class="smaller color-3 d-block"> +11.37 (137) </span>
+              </div>
+              <div class="col-4 ltc-detail px-1 text-center">
+                <img class="w-100" src="../../assets/images/ltc-bar.png">
+              </div>
+              <div class="col-4 margin-auto text-center">
+                <span class="bold d-block"> $4.20 </span>
+                <span class="smaller success-text d-block bold-weight nowrap-text"> +1.28 (137) </span>
+              </div>
+              
+            </div>
+          </mat-card>
+        </div>
+        <!-- LTC card end -->
+
+
+        <!-- avg chart start -->
+        <div class="avg-chart-box col-12">
+          <img class="w-100" src="../../assets/images/Capture2.JPG">
+        </div>
+        <!-- avg chart end -->
+    </div>
+
+    </div>
+    <!-- right box end -->
+
+
+</div>

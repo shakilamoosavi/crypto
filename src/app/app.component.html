@@ -1,0 +1,99 @@
+<div class="mat-app-background">
+
+  <!-- mobile menu start -->
+  <mat-drawer-container class="mobile-menu" [hasBackdrop]="true">
+    <mat-drawer #drawer1 [mode]="'over'">
+      <div>
+        <a routerLink="/" class="active">
+          <mat-icon>home</mat-icon>
+          <div>Home</div>
+        </a>
+        <a>
+          <mat-icon>work</mat-icon>
+          <div>Projects</div>
+        </a>
+        <a>
+          <mat-icon>location_city</mat-icon>
+          <div>Buildings</div>
+        </a>
+        <a>
+          <mat-icon>person</mat-icon>
+          <div>Team Members</div>
+        </a>
+        <a>
+          <mat-icon>bar_chart</mat-icon>
+          <div>Stats</div>
+        </a>
+        <a>
+          <mat-icon>settings</mat-icon>
+          <div>Settings</div>
+        </a>
+    
+        <div class="justify-center d-flex">
+          <div class="margin-top-auto text-center">
+            <div class="profile-img">
+              <img src="https://www.kindpng.com/picc/m/24-248442_female-user-avatar-woman-profile-member-user-profile.png" />
+            </div>
+            <b> Anna Milan </b>
+          </div>
+        </div>
+      </div>
+    </mat-drawer>
+  
+    <mat-drawer-content>
+      <mat-icon class="mx-3 mt-3" (click)="drawer1.toggle()">menu</mat-icon>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  <!-- mobile menu end -->
+
+
+  <div class="main-container container py-5">
+    <mat-card class="main-card">
+      <div class="row">
+        <div class="px-3 py-4 col-md-2 col-sm-12 web-menu" [ngClass]="showFullMenu ? 'col-xl-2 col-lg-2' : 'col-xl-1 col-lg-1'">
+          <div [ngClass]="showFullMenu ? 'full-menu' : 'small-menu'">
+            <div>
+              <mat-icon class="cursor-pointer mx-3 mb-4" (click)="showFullMenu = !showFullMenu">menu</mat-icon>
+            </div>
+            <a routerLink="/" class="active">
+              <mat-icon>home</mat-icon>
+              <div>Home</div>
+            </a>
+            <a>
+              <mat-icon>work</mat-icon>
+              <div>Projects</div>
+            </a>
+            <a>
+              <mat-icon>location_city</mat-icon>
+              <div>Buildings</div>
+            </a>
+            <a>
+              <mat-icon>person</mat-icon>
+              <div>Team Members</div>
+            </a>
+            <a>
+              <mat-icon>bar_chart</mat-icon>
+              <div>Stats</div>
+            </a>
+            <a>
+              <mat-icon>settings</mat-icon>
+              <div>Settings</div>
+            </a>
+        
+            <div class="justify-center d-flex full-height">
+              <div class="margin-top-auto text-center">
+                <div class="profile-img">
+                  <img src="https://www.kindpng.com/picc/m/24-248442_female-user-avatar-woman-profile-member-user-profile.png" />
+                </div>
+                <b> Anna Milan </b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="px-3 py-4 col-md-12 col-sm-12 mb-3" [ngClass]="showFullMenu ? 'col-xl-10 col-lg-10 ' : 'col-xl-11 col-lg-11'">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>
